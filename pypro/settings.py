@@ -173,13 +173,10 @@ if AWS_ACCESS_KEY_ID:
     INSTALLED_APPS.append('s3_folder_storage')
     INSTALLED_APPS.append('storages')
 
-
-
-
-SENTRY_DSN=config('SENTRY_DSN', default=None)
+SENTRY_DSN = config('SENTRY_DSN', default=None)
 
 if SENTRY_DSN:
     sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()],
-        # If you wish to associate users to errors (assuming you are using
-        # django.contrib.auth) you may enable sending PII data.
-        send_default_pii=True)
+                    # If you wish to associate users to errors (assuming you are using
+                    # django.contrib.auth) you may enable sending PII data.
+                    send_default_pii=True)
