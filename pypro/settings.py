@@ -131,14 +131,14 @@ USE_TZ = True
 # Configuraćão de ambiente de desenvolviemnto
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 # ajustado o AWS_ACCESS_KEY_ID imagino que estava sempre entando na storage configuration
 COLLECTFAST_ENABLE = False
-AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', None)
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)
+
 
 # STORAGE CONFIGURATION IN S3 AWS
 # ----------------------------------------
