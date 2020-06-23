@@ -134,7 +134,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 # ajustado o AWS_ACCESS_KEY_ID imagino que estava sempre entando na storage configuration
 COLLECTFAST_ENABLE = False
-AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID',None)
 
 # STORAGE CONFIGURATION IN S3 AWS
 # ----------------------------------------
