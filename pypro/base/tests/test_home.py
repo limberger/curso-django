@@ -7,7 +7,8 @@ def test_status_code(client: Client):
     resp = client.get('/')
     assert resp.status_code == 200
 
+
 def test_title(client: Client):
     resp = client.get('/')
-    assert_contains(resp,'<title>Psicanalista Marilda Limberger</title>')
+    assert_contains(resp, '<title>Psicanalista Marilda Limberger</title>')
     assert resp.status_code == 200
