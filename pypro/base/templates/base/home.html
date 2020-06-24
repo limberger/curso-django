@@ -1,5 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
+{% load instagram_client %}
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
@@ -11,6 +12,7 @@
     <meta name="description" content="Psicanálise online">
     <meta name="author" content="João Paulo Limberger">
 
+  	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" />
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <script src="{% static 'js/jquery.min.js' %}"></script>
@@ -36,31 +38,38 @@
 		<div class="col-md-12">
 			<div class="jumbotron">
 				<h2>
-					Hello, world!
+					Marilda Limberger - Psicanálise On-Line
 				</h2>
 				<p>
-					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-				</p>
-				<p>
-					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+					Psicanálise online e Consulta de Florais de Bach online.
+Para marcar uma consulta online escreva um email para mnslimberger@gmail solicite uma tabela com horários disponíveis para o seu atendimento.
+Escolha o horário e retorne seu e-mail.
+Você receberá um número de conta para depositar o valor da terapia.
+Após a confirmação do depósito bancário, seu horário estará assegurado. Psicanalista: Marilda Nunes Limberger
 				</p>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
+						{% instagram_user_recent_media marlimberger %}
+						{% for media in recent_media|slice:":3" %}
+				<div class="col-md-4">
 					<div class="card">
 						<h5 class="card-header">
-							Card title
+							<a href="http://instagram.com/marlimberger">Marlimberger</a>
 						</h5>
 						<div class="card-body">
 							<p class="card-text">
-								Card content
+									<div class="django_instagram_media_wall_item">
+										<a href="//instagram.com/p/{{ media.shortcode }}" target="_blank">
+											<img src="{{ media.thumbnail_src }}" alt="foto do instagram"
+												 class="img-thumbnail mb-3" /><br/>
+											<span>{{ media.edge_media_to_caption.edges.0.node.text }}</span>
+										</a>
+									</div>
 							</p>
-						</div>
-						<div class="card-footer">
-							Card footer
 						</div>
 					</div>
 				</div>
+						{% endfor %}
 			</div>
 		</div>
 	</div>
