@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'pypro.base',
     'pypro.videos',
     'pypro.modulos',
+    'pypro.turmas',
     'django_instagram',
     'ordered_model',
     'django_extensions',
