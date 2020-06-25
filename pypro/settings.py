@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pypro.base',
     'pypro.videos',
+    'pypro.modulos',
     'django_instagram',
 ]
 
