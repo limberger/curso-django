@@ -24,6 +24,7 @@ collectfast = "*"
 django-debug-toolbar = "*"
 sentry-sdk = "*"
 django-instagram = "*"
+django-ordered-model = "*"
 
 [requires]
 python_version = "3.8"
