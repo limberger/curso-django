@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'pypro.modulos',
     'django_instagram',
     'ordered_model',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
