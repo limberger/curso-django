@@ -39,6 +39,6 @@ def test_aulas_titulos(resp, aulas: Aula):
         assert_contains(resp, aula.titulo)
 
 
-def test_aulas_titulos(resp, aulas: Aula):
+def test_aulas_linkss(resp, aulas: Aula):
     for aula in aulas:
         assert_contains(resp, aula.get_absolute_url())
