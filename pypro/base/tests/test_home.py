@@ -5,7 +5,7 @@ from pypro.django_assertions import assert_contains
 
 
 @pytest.fixture
-def resp(client):
+def resp(client, db):
     resp = client.get(reverse('base:home'))
     return resp
 
@@ -19,7 +19,7 @@ def test_title(resp):
 
 
 def test_home_link(resp):
-    assert_contains(resp, f'href="{reverse("base:home")}">Psique.org</a>')
+    assert_contains(resp, f'href="{reverse("base:home")}">Psique.org<')
 
 
 def test_email_link(resp):
