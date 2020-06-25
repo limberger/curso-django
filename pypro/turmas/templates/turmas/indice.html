@@ -1,8 +1,8 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% load instagram_client %}
-{% block title %}{{modulo.titulo}}{% endblock title %}
-{% block description %}Página com detalhes do módulo {{modulo.titulo}}{% endblock description %}
+{% block title %}Índice de Turmas{% endblock title %}
+{% block description %}Página com todas turmas do curso{% endblock description %}
 {% block body %}
 <div class="container">
 	{% for modulo in modulos %}
